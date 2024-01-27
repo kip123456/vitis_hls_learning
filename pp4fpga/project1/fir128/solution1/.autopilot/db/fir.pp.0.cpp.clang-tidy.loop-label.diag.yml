@@ -1,0 +1,49 @@
+---
+MainSourceFile:  'D:/code/pp4fpga/project1/fir128/solution1/.autopilot/db/fir.pp.0.cpp'
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1207_1:  '
+    FileOffset:      1207
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_base.h'
+    Replacements:    
+      - FilePath:        'D:\code\pp4fpga\project1\fir128\solution1\.autopilot\db\fir.pp.0.cpp'
+        Offset:          55317
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1207_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\code\pp4fpga\project1\fir128\solution1\.autopilot\db\fir.pp.0.cpp'
+        Offset:          282641
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\code\pp4fpga\project1\fir128\solution1\.autopilot\db\fir.pp.0.cpp'
+        Offset:          283105
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_int_ref.h'
+    Replacements:    
+      - FilePath:        'D:\code\pp4fpga\project1\fir128\solution1\.autopilot\db\fir.pp.0.cpp'
+        Offset:          283570
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        'D:\Xilinx\Vitis_HLS\2023.2\common\technology\autopilot\etc\ap_fixed_base.h'
+    Replacements:    
+      - FilePath:        'D:\code\pp4fpga\project1\fir128\solution1\.autopilot\db\fir.pp.0.cpp'
+        Offset:          566852
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+...

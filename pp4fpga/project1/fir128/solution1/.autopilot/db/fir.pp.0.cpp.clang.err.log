@@ -1,0 +1,22 @@
+D:/code/pp4fpga/project1/fir128/solution1/csynth.tcl:18:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=name=fir_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=fir
+        ^
+D:/code/pp4fpga/project1/fir128/solution1/directives.tcl:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=name=fir_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=fir
+        ^
+fir128/fir.cpp:22:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=dim=1 type=complete variable=c_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION dim=1 type=complete variable=c
+        ^
+fir128/fir.cpp:25:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=dim=1 type=complete variable=shift_reg_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION dim=1 type=complete variable=shift_reg
+        ^
+fir128/fir.cpp:27:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=dim=1 type=complete variable=tmp_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION dim=1 type=complete variable=tmp
+        ^
+fir128/fir.cpp:32:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=skip_exit_check_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL skip_exit_check
+        ^
+fir128/fir.cpp:38:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=fir_XLX_SEP_ PragmaOptions=skip_exit_check_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL skip_exit_check
+        ^
+7 warnings generated.

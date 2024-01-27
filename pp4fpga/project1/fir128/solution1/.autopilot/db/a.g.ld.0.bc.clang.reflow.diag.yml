@@ -1,0 +1,50 @@
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fir128/fir.cpp, Line: 19, Column: 0 }
+Function:        _Z3firP6ap_intILi17EES0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        MAC
+  - String:          ''' ('
+  - LoopLoc:         'fir128/fir.cpp:37:2'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fir
+  - String:          ''' completely with a factor of '
+  - Factor:          '128'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: fir128/fir.cpp, Line: 19, Column: 0 }
+Function:        _Z3firP6ap_intILi17EES0_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        TDL
+  - String:          ''' ('
+  - LoopLoc:         'fir128/fir.cpp:31:2'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fir
+  - String:          ''' completely with a factor of '
+  - Factor:          '127'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: fir128/fir.cpp, Line: 24, Column: 0 }
+Function:        _Z3firP6ap_intILi17EES0_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZZ3firP6ap_intILi17EES0_E9shift_reg
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

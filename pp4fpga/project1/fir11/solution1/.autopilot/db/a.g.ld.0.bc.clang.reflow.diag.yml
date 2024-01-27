@@ -1,0 +1,20 @@
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_26_1
+  - String:          '> at '
+  - LoopLoc:         'fir11/fir.cpp:26:19'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_28_2
+  - String:          '> at '
+  - LoopLoc:         'fir11/fir.cpp:28:19'
+  - String:          ' '
+...

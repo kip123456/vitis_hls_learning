@@ -1,0 +1,33 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/code/pp4fpga/project1/fir128/solution1/csynth.tcl:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=fir" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="D:/code/pp4fpga/project1/fir128/solution1/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=fir" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir128/fir.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="dim=1 type=complete variable=c" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir128/fir.cpp:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="dim=1 type=complete variable=shift_reg" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir128/fir.cpp:27:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="dim=1 type=complete variable=tmp" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir128/fir.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="skip_exit_check" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="fir128/fir.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="fir" ARG_PragmaIsValid="1" ARG_PragmaOptions="skip_exit_check" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="fir128/fir.cpp:19:0" msg_body="Unrolling loop 'MAC' (fir128/fir.cpp:37:2) in function 'fir' completely with a factor of 128">
+        <args Factor="128" LoopLoc="fir128/fir.cpp:37:2" LoopName="MAC"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="fir128/fir.cpp:19:0" msg_body="Unrolling loop 'TDL' (fir128/fir.cpp:31:2) in function 'fir' completely with a factor of 127">
+        <args Factor="127" LoopLoc="fir128/fir.cpp:31:2" LoopName="TDL"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="fir128/fir.cpp:24:0" msg_body="Applying array_partition to '_ZZ3firP6ap_intILi17EES0_E9shift_reg': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZZ3firP6ap_intILi17EES0_E9shift_reg"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

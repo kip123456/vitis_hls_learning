@@ -1,0 +1,849 @@
+
+
+================================================================
+== Vitis HLS Report for 'fir'
+================================================================
+* Date:           Thu Jan 25 20:14:02 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        fir128
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.603 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       27|       27|  0.270 us|  0.270 us|   28|   28|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 28
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.87>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_107_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_107" [fir128/fir.cpp:39]   --->   Operation 29 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_107_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_106_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_106" [fir128/fir.cpp:39]   --->   Operation 30 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_106_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_106_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_107" [fir128/fir.cpp:33]   --->   Operation 31 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_105_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_105" [fir128/fir.cpp:39]   --->   Operation 32 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_105_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_105_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_106" [fir128/fir.cpp:33]   --->   Operation 33 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_104_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_104" [fir128/fir.cpp:39]   --->   Operation 34 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_104_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_104_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_105" [fir128/fir.cpp:33]   --->   Operation 35 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp22 = add i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_105_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_104_load" [fir128/fir.cpp:39]   --->   Operation 36 'add' 'tmp22' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 37 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp21 = add i15 %tmp22, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_106_load" [fir128/fir.cpp:39]   --->   Operation 37 'add' 'tmp21' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 2 <SV = 1> <Delay = 5.81>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_125_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_125" [fir128/fir.cpp:39]   --->   Operation 38 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_125_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_124_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_124" [fir128/fir.cpp:39]   --->   Operation 39 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_124_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_124_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_125" [fir128/fir.cpp:33]   --->   Operation 40 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_123_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_123" [fir128/fir.cpp:39]   --->   Operation 41 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_123_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_123_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_124" [fir128/fir.cpp:33]   --->   Operation 42 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_122_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_122" [fir128/fir.cpp:39]   --->   Operation 43 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_122_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_122_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_123" [fir128/fir.cpp:33]   --->   Operation 44 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_119_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_119" [fir128/fir.cpp:39]   --->   Operation 45 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_119_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_118_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_118" [fir128/fir.cpp:39]   --->   Operation 46 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_118_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_118_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_119" [fir128/fir.cpp:33]   --->   Operation 47 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_117_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_117" [fir128/fir.cpp:39]   --->   Operation 48 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_117_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_117_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_118" [fir128/fir.cpp:33]   --->   Operation 49 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_116_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_116" [fir128/fir.cpp:39]   --->   Operation 50 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_116_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_116_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_117" [fir128/fir.cpp:33]   --->   Operation 51 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_115_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_115" [fir128/fir.cpp:39]   --->   Operation 52 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_115_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_115_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_116" [fir128/fir.cpp:33]   --->   Operation 53 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_114_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_114" [fir128/fir.cpp:39]   --->   Operation 54 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_114_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_114_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_115" [fir128/fir.cpp:33]   --->   Operation 55 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_113_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_113" [fir128/fir.cpp:39]   --->   Operation 56 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_113_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_113_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_114" [fir128/fir.cpp:33]   --->   Operation 57 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_112_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_112" [fir128/fir.cpp:39]   --->   Operation 58 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_112_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_112_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_113" [fir128/fir.cpp:33]   --->   Operation 59 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_111_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_111" [fir128/fir.cpp:39]   --->   Operation 60 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_111_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_111_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_112" [fir128/fir.cpp:33]   --->   Operation 61 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_110_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_110" [fir128/fir.cpp:39]   --->   Operation 62 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_110_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_110_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_111" [fir128/fir.cpp:33]   --->   Operation 63 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_109_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_109" [fir128/fir.cpp:39]   --->   Operation 64 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_109_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_109_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_110" [fir128/fir.cpp:33]   --->   Operation 65 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_108_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_108" [fir128/fir.cpp:39]   --->   Operation 66 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_108_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_108_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_109" [fir128/fir.cpp:33]   --->   Operation 67 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_107_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_108" [fir128/fir.cpp:33]   --->   Operation 68 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp6 = add i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_123_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_122_load" [fir128/fir.cpp:39]   --->   Operation 69 'add' 'tmp6' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 70 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp5 = add i15 %tmp6, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_124_load" [fir128/fir.cpp:39]   --->   Operation 70 'add' 'tmp5' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 71 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp11 = add i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_117_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_116_load" [fir128/fir.cpp:39]   --->   Operation 71 'add' 'tmp11' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 72 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp10 = add i15 %tmp11, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_118_load" [fir128/fir.cpp:39]   --->   Operation 72 'add' 'tmp10' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 73 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp15 = add i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_114_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_113_load" [fir128/fir.cpp:39]   --->   Operation 73 'add' 'tmp15' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 74 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp14 = add i15 %tmp15, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_115_load" [fir128/fir.cpp:39]   --->   Operation 74 'add' 'tmp14' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 75 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp17 = add i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_111_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_110_load" [fir128/fir.cpp:39]   --->   Operation 75 'add' 'tmp17' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 76 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp16 = add i15 %tmp17, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_112_load" [fir128/fir.cpp:39]   --->   Operation 76 'add' 'tmp16' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 77 [1/1] (1.94ns)   --->   "%tmp20 = add i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_108_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_107_load" [fir128/fir.cpp:39]   --->   Operation 77 'add' 'tmp20' <Predicate = true> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 78 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp19 = add i15 %tmp20, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_109_load" [fir128/fir.cpp:39]   --->   Operation 78 'add' 'tmp19' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 79 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp18 = add i15 %tmp21, i15 %tmp19" [fir128/fir.cpp:39]   --->   Operation 79 'add' 'tmp18' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 3 <SV = 2> <Delay = 5.81>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%x_read = read i17 @_ssdm_op_Read.ap_auto.i17, i17 %x" [fir128/fir.cpp:15]   --->   Operation 80 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%trunc_ln15 = trunc i17 %x_read" [fir128/fir.cpp:15]   --->   Operation 81 'trunc' 'trunc_ln15' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_126_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_126" [fir128/fir.cpp:39]   --->   Operation 82 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_126_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_125_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_126" [fir128/fir.cpp:33]   --->   Operation 83 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_121_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_121" [fir128/fir.cpp:39]   --->   Operation 84 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_121_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_121_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_122" [fir128/fir.cpp:33]   --->   Operation 85 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_120_load = load i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_120" [fir128/fir.cpp:39]   --->   Operation 86 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_120_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_120_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_121" [fir128/fir.cpp:33]   --->   Operation 87 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_119_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_120" [fir128/fir.cpp:33]   --->   Operation 88 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "%trunc_ln39 = trunc i17 %x_read" [fir128/fir.cpp:39]   --->   Operation 89 'trunc' 'trunc_ln39' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (1.94ns)   --->   "%tmp4 = add i15 %trunc_ln39, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_125_load" [fir128/fir.cpp:39]   --->   Operation 90 'add' 'tmp4' <Predicate = true> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 91 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp3 = add i15 %tmp4, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_126_load" [fir128/fir.cpp:39]   --->   Operation 91 'add' 'tmp3' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 92 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp2 = add i15 %tmp5, i15 %tmp3" [fir128/fir.cpp:39]   --->   Operation 92 'add' 'tmp2' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 93 [1/1] (1.94ns)   --->   "%tmp9 = add i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_120_load, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_119_load" [fir128/fir.cpp:39]   --->   Operation 93 'add' 'tmp9' <Predicate = true> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 94 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp8 = add i15 %tmp9, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_121_load" [fir128/fir.cpp:39]   --->   Operation 94 'add' 'tmp8' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 95 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp7 = add i15 %tmp10, i15 %tmp8" [fir128/fir.cpp:39]   --->   Operation 95 'add' 'tmp7' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 96 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp13 = add i15 %tmp16, i15 %tmp14" [fir128/fir.cpp:39]   --->   Operation 96 'add' 'tmp13' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 97 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp12 = add i15 %tmp18, i15 %tmp13" [fir128/fir.cpp:39]   --->   Operation 97 'add' 'tmp12' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 3.87>
+ST_4 : Operation 98 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp1 = add i15 %tmp7, i15 %tmp2" [fir128/fir.cpp:39]   --->   Operation 98 'add' 'tmp1' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 99 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp61 = add i15 %tmp12, i15 %tmp1" [fir128/fir.cpp:39]   --->   Operation 99 'add' 'tmp61' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 3.87>
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_96_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_96" [fir128/fir.cpp:39]   --->   Operation 100 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_96_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 101 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_95" [fir128/fir.cpp:33]   --->   Operation 101 'load' 'fir_ap_int_17_ap_int_17_shift_reg' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 102 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_96" [fir128/fir.cpp:33]   --->   Operation 102 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 103 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_4 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_94" [fir128/fir.cpp:33]   --->   Operation 103 'load' 'fir_ap_int_17_ap_int_17_shift_reg_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 104 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_4, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_95" [fir128/fir.cpp:33]   --->   Operation 104 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 105 [1/1] (0.00ns)   --->   "%trunc_ln39_55 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_4" [fir128/fir.cpp:39]   --->   Operation 105 'trunc' 'trunc_ln39_55' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 106 [1/1] (0.00ns)   --->   "%trunc_ln39_56 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg" [fir128/fir.cpp:39]   --->   Operation 106 'trunc' 'trunc_ln39_56' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 107 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp62 = sub i15 %tmp61, i15 %trunc_ln39_56" [fir128/fir.cpp:39]   --->   Operation 107 'sub' 'tmp62' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 108 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp63 = sub i15 %tmp62, i15 %trunc_ln39_55" [fir128/fir.cpp:39]   --->   Operation 108 'sub' 'tmp63' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 3.87>
+ST_6 : Operation 109 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_5 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_93" [fir128/fir.cpp:33]   --->   Operation 109 'load' 'fir_ap_int_17_ap_int_17_shift_reg_5' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 110 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_5, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_94" [fir128/fir.cpp:33]   --->   Operation 110 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 111 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_6 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_92" [fir128/fir.cpp:33]   --->   Operation 111 'load' 'fir_ap_int_17_ap_int_17_shift_reg_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 112 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_6, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_93" [fir128/fir.cpp:33]   --->   Operation 112 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 113 [1/1] (0.00ns)   --->   "%trunc_ln39_53 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_6" [fir128/fir.cpp:39]   --->   Operation 113 'trunc' 'trunc_ln39_53' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 114 [1/1] (0.00ns)   --->   "%trunc_ln39_54 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_5" [fir128/fir.cpp:39]   --->   Operation 114 'trunc' 'trunc_ln39_54' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 115 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp64 = sub i15 %tmp63, i15 %trunc_ln39_54" [fir128/fir.cpp:39]   --->   Operation 115 'sub' 'tmp64' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 116 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp65 = sub i15 %tmp64, i15 %trunc_ln39_53" [fir128/fir.cpp:39]   --->   Operation 116 'sub' 'tmp65' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 7 <SV = 6> <Delay = 3.87>
+ST_7 : Operation 117 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_7 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_91" [fir128/fir.cpp:33]   --->   Operation 117 'load' 'fir_ap_int_17_ap_int_17_shift_reg_7' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 118 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_7, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_92" [fir128/fir.cpp:33]   --->   Operation 118 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 119 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_90_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_90" [fir128/fir.cpp:33]   --->   Operation 119 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_90_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 120 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_90_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_91" [fir128/fir.cpp:33]   --->   Operation 120 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 121 [1/1] (0.00ns)   --->   "%trunc_ln39_51 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_90_load" [fir128/fir.cpp:39]   --->   Operation 121 'trunc' 'trunc_ln39_51' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 122 [1/1] (0.00ns)   --->   "%trunc_ln39_52 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_7" [fir128/fir.cpp:39]   --->   Operation 122 'trunc' 'trunc_ln39_52' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 123 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp66 = sub i15 %tmp65, i15 %trunc_ln39_52" [fir128/fir.cpp:39]   --->   Operation 123 'sub' 'tmp66' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 124 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp67 = sub i15 %tmp66, i15 %trunc_ln39_51" [fir128/fir.cpp:39]   --->   Operation 124 'sub' 'tmp67' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 7> <Delay = 3.87>
+ST_8 : Operation 125 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_89_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_89" [fir128/fir.cpp:33]   --->   Operation 125 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_89_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 126 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_89_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_90" [fir128/fir.cpp:33]   --->   Operation 126 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 127 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_88_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_88" [fir128/fir.cpp:33]   --->   Operation 127 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_88_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 128 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_88_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_89" [fir128/fir.cpp:33]   --->   Operation 128 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 129 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_14 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_74" [fir128/fir.cpp:33]   --->   Operation 129 'load' 'fir_ap_int_17_ap_int_17_shift_reg_14' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 130 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_15 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_73" [fir128/fir.cpp:33]   --->   Operation 130 'load' 'fir_ap_int_17_ap_int_17_shift_reg_15' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 131 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_15, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_74" [fir128/fir.cpp:33]   --->   Operation 131 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 132 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_16 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_72" [fir128/fir.cpp:33]   --->   Operation 132 'load' 'fir_ap_int_17_ap_int_17_shift_reg_16' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 133 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_16, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_73" [fir128/fir.cpp:33]   --->   Operation 133 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 134 [1/1] (0.00ns)   --->   "%trunc_ln39_41 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_16" [fir128/fir.cpp:39]   --->   Operation 134 'trunc' 'trunc_ln39_41' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 135 [1/1] (0.00ns)   --->   "%trunc_ln39_42 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_15" [fir128/fir.cpp:39]   --->   Operation 135 'trunc' 'trunc_ln39_42' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 136 [1/1] (0.00ns)   --->   "%trunc_ln39_43 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_14" [fir128/fir.cpp:39]   --->   Operation 136 'trunc' 'trunc_ln39_43' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 137 [1/1] (0.00ns)   --->   "%trunc_ln39_49 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_88_load" [fir128/fir.cpp:39]   --->   Operation 137 'trunc' 'trunc_ln39_49' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 138 [1/1] (0.00ns)   --->   "%trunc_ln39_50 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_89_load" [fir128/fir.cpp:39]   --->   Operation 138 'trunc' 'trunc_ln39_50' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 139 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp68 = sub i15 %tmp67, i15 %trunc_ln39_50" [fir128/fir.cpp:39]   --->   Operation 139 'sub' 'tmp68' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 140 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp69 = sub i15 %tmp68, i15 %trunc_ln39_49" [fir128/fir.cpp:39]   --->   Operation 140 'sub' 'tmp69' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 141 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp29 = add i15 %trunc_ln39_42, i15 %trunc_ln39_41" [fir128/fir.cpp:39]   --->   Operation 141 'add' 'tmp29' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 142 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp28 = add i15 %tmp29, i15 %trunc_ln39_43" [fir128/fir.cpp:39]   --->   Operation 142 'add' 'tmp28' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 9 <SV = 8> <Delay = 5.98>
+ST_9 : Operation 143 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_103_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_103" [fir128/fir.cpp:39]   --->   Operation 143 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_103_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 144 [1/1] (0.00ns)   --->   "%trunc_ln33 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_103_load" [fir128/fir.cpp:33]   --->   Operation 144 'trunc' 'trunc_ln33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 145 [1/1] (0.00ns)   --->   "%store_ln33 = store i15 %trunc_ln33, i15 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_104" [fir128/fir.cpp:33]   --->   Operation 145 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 146 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_102_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_102" [fir128/fir.cpp:39]   --->   Operation 146 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_102_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 147 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_102_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_103" [fir128/fir.cpp:33]   --->   Operation 147 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 148 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_97_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_97" [fir128/fir.cpp:39]   --->   Operation 148 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_97_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 149 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_96_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_97" [fir128/fir.cpp:33]   --->   Operation 149 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 150 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_80_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_80" [fir128/fir.cpp:39]   --->   Operation 150 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_80_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 151 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_79_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_79" [fir128/fir.cpp:33]   --->   Operation 151 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_79_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 152 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_79_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_80" [fir128/fir.cpp:33]   --->   Operation 152 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 153 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_78_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_78" [fir128/fir.cpp:33]   --->   Operation 153 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_78_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 154 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_78_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_79" [fir128/fir.cpp:33]   --->   Operation 154 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 155 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_77_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_77" [fir128/fir.cpp:33]   --->   Operation 155 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_77_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 156 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_77_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_78" [fir128/fir.cpp:33]   --->   Operation 156 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 157 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_76_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_76" [fir128/fir.cpp:33]   --->   Operation 157 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_76_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 158 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_76_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_77" [fir128/fir.cpp:33]   --->   Operation 158 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 159 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_13 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_75" [fir128/fir.cpp:33]   --->   Operation 159 'load' 'fir_ap_int_17_ap_int_17_shift_reg_13' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 160 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_13, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_76" [fir128/fir.cpp:33]   --->   Operation 160 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 161 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_14, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_75" [fir128/fir.cpp:33]   --->   Operation 161 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 162 [1/1] (0.00ns)   --->   "%trunc_ln39_44 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_13" [fir128/fir.cpp:39]   --->   Operation 162 'trunc' 'trunc_ln39_44' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 163 [1/1] (0.00ns)   --->   "%trunc_ln39_45 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_76_load" [fir128/fir.cpp:39]   --->   Operation 163 'trunc' 'trunc_ln39_45' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 164 [1/1] (0.00ns)   --->   "%trunc_ln39_46 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_77_load" [fir128/fir.cpp:39]   --->   Operation 164 'trunc' 'trunc_ln39_46' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 165 [1/1] (0.00ns)   --->   "%trunc_ln39_47 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_78_load" [fir128/fir.cpp:39]   --->   Operation 165 'trunc' 'trunc_ln39_47' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 166 [1/1] (0.00ns)   --->   "%trunc_ln39_48 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_79_load" [fir128/fir.cpp:39]   --->   Operation 166 'trunc' 'trunc_ln39_48' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 167 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp24 = add i15 %tmp69, i15 %trunc_ln39_48" [fir128/fir.cpp:39]   --->   Operation 167 'add' 'tmp24' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 168 [1/1] (1.94ns)   --->   "%tmp25 = add i15 %trunc_ln39_47, i15 %trunc_ln39_46" [fir128/fir.cpp:39]   --->   Operation 168 'add' 'tmp25' <Predicate = true> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 169 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp23 = add i15 %tmp25, i15 %tmp24" [fir128/fir.cpp:39]   --->   Operation 169 'add' 'tmp23' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 170 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp27 = add i15 %trunc_ln39_45, i15 %trunc_ln39_44" [fir128/fir.cpp:39]   --->   Operation 170 'add' 'tmp27' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 171 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp26 = add i15 %tmp28, i15 %tmp27" [fir128/fir.cpp:39]   --->   Operation 171 'add' 'tmp26' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 172 [1/1] (2.07ns)   --->   "%tmp131 = add i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_102_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_103_load" [fir128/fir.cpp:39]   --->   Operation 172 'add' 'tmp131' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 173 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp132 = sub i16 %tmp131, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_97_load" [fir128/fir.cpp:39]   --->   Operation 173 'sub' 'tmp132' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 174 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp133 = sub i16 %tmp132, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_96_load" [fir128/fir.cpp:39]   --->   Operation 174 'sub' 'tmp133' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 9> <Delay = 3.90>
+ST_10 : Operation 175 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_101_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_101" [fir128/fir.cpp:33]   --->   Operation 175 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_101_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 176 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_101_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_102" [fir128/fir.cpp:33]   --->   Operation 176 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 177 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_100_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_100" [fir128/fir.cpp:39]   --->   Operation 177 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_100_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 178 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_100_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_101" [fir128/fir.cpp:33]   --->   Operation 178 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 179 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_99_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_99" [fir128/fir.cpp:39]   --->   Operation 179 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_99_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 180 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_99_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_100" [fir128/fir.cpp:33]   --->   Operation 180 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 181 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_98_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_98" [fir128/fir.cpp:33]   --->   Operation 181 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_98_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 182 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_98_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_99" [fir128/fir.cpp:33]   --->   Operation 182 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 183 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_97_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_98" [fir128/fir.cpp:33]   --->   Operation 183 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 184 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_87_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_87" [fir128/fir.cpp:39]   --->   Operation 184 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_87_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 185 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_87_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_88" [fir128/fir.cpp:33]   --->   Operation 185 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 186 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_86_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_86" [fir128/fir.cpp:39]   --->   Operation 186 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_86_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 187 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_86_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_87" [fir128/fir.cpp:33]   --->   Operation 187 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 188 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_8 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_85" [fir128/fir.cpp:33]   --->   Operation 188 'load' 'fir_ap_int_17_ap_int_17_shift_reg_8' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 189 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_8, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_86" [fir128/fir.cpp:33]   --->   Operation 189 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 190 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_9 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_84" [fir128/fir.cpp:39]   --->   Operation 190 'load' 'fir_ap_int_17_ap_int_17_shift_reg_9' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 191 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_9, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_85" [fir128/fir.cpp:33]   --->   Operation 191 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 192 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_12 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_81" [fir128/fir.cpp:39]   --->   Operation 192 'load' 'fir_ap_int_17_ap_int_17_shift_reg_12' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 193 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_80_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_81" [fir128/fir.cpp:33]   --->   Operation 193 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 194 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_17 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_71" [fir128/fir.cpp:39]   --->   Operation 194 'load' 'fir_ap_int_17_ap_int_17_shift_reg_17' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 195 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_17, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_72" [fir128/fir.cpp:33]   --->   Operation 195 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 196 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_70_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_70" [fir128/fir.cpp:39]   --->   Operation 196 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_70_load' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 197 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_70_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_71" [fir128/fir.cpp:33]   --->   Operation 197 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 198 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_19 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_64" [fir128/fir.cpp:39]   --->   Operation 198 'load' 'fir_ap_int_17_ap_int_17_shift_reg_19' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 199 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_20 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_63" [fir128/fir.cpp:33]   --->   Operation 199 'load' 'fir_ap_int_17_ap_int_17_shift_reg_20' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 200 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_20, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_64" [fir128/fir.cpp:33]   --->   Operation 200 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 201 [1/1] (0.00ns)   --->   "%trunc_ln39_40 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_20" [fir128/fir.cpp:39]   --->   Operation 201 'trunc' 'trunc_ln39_40' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 202 [1/1] (0.00ns)   --->   "%empty_55 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_8" [fir128/fir.cpp:33]   --->   Operation 202 'trunc' 'empty_55' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 203 [1/1] (0.00ns)   --->   "%empty_56 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_98_load" [fir128/fir.cpp:33]   --->   Operation 203 'trunc' 'empty_56' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 204 [1/1] (0.00ns)   --->   "%empty_57 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_101_load" [fir128/fir.cpp:33]   --->   Operation 204 'trunc' 'empty_57' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 205 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp77 = add i15 %tmp26, i15 %tmp23" [fir128/fir.cpp:39]   --->   Operation 205 'add' 'tmp77' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 206 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp78 = sub i15 %tmp77, i15 %trunc_ln39_40" [fir128/fir.cpp:39]   --->   Operation 206 'sub' 'tmp78' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 207 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp134 = sub i16 %tmp133, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_87_load" [fir128/fir.cpp:39]   --->   Operation 207 'sub' 'tmp134' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 208 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp135 = sub i16 %tmp134, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_86_load" [fir128/fir.cpp:39]   --->   Operation 208 'sub' 'tmp135' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 209 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp39 = add i16 %fir_ap_int_17_ap_int_17_shift_reg_17, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_70_load" [fir128/fir.cpp:39]   --->   Operation 209 'add' 'tmp39' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 210 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp38 = add i16 %tmp39, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_80_load" [fir128/fir.cpp:39]   --->   Operation 210 'add' 'tmp38' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 211 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp161 = sub i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_100_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_99_load" [fir128/fir.cpp:39]   --->   Operation 211 'sub' 'tmp161' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 212 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp162 = sub i16 %tmp161, i16 %fir_ap_int_17_ap_int_17_shift_reg_9" [fir128/fir.cpp:39]   --->   Operation 212 'sub' 'tmp162' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 213 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp179 = sub i13 %empty_57, i13 %empty_56" [fir128/fir.cpp:33]   --->   Operation 213 'sub' 'tmp179' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 214 [1/1] (3.81ns) (root node of TernaryAdder)   --->   "%tmp180 = sub i13 %tmp179, i13 %empty_55" [fir128/fir.cpp:33]   --->   Operation 214 'sub' 'tmp180' <Predicate = true> <Delay = 3.81> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 11 <SV = 10> <Delay = 3.90>
+ST_11 : Operation 215 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_10 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_83" [fir128/fir.cpp:39]   --->   Operation 215 'load' 'fir_ap_int_17_ap_int_17_shift_reg_10' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 216 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_10, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_84" [fir128/fir.cpp:33]   --->   Operation 216 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 217 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_11 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_82" [fir128/fir.cpp:33]   --->   Operation 217 'load' 'fir_ap_int_17_ap_int_17_shift_reg_11' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 218 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_11, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_83" [fir128/fir.cpp:33]   --->   Operation 218 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 219 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_12, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_82" [fir128/fir.cpp:33]   --->   Operation 219 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 220 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_69_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_69" [fir128/fir.cpp:33]   --->   Operation 220 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_69_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 221 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_69_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_70" [fir128/fir.cpp:33]   --->   Operation 221 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 222 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_68_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_68" [fir128/fir.cpp:39]   --->   Operation 222 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_68_load' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 223 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_68_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_69" [fir128/fir.cpp:33]   --->   Operation 223 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 224 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_21 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_62" [fir128/fir.cpp:33]   --->   Operation 224 'load' 'fir_ap_int_17_ap_int_17_shift_reg_21' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 225 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_21, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_63" [fir128/fir.cpp:33]   --->   Operation 225 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 226 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_22 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_61" [fir128/fir.cpp:33]   --->   Operation 226 'load' 'fir_ap_int_17_ap_int_17_shift_reg_22' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 227 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_22, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_62" [fir128/fir.cpp:33]   --->   Operation 227 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 228 [1/1] (0.00ns)   --->   "%trunc_ln39_38 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_22" [fir128/fir.cpp:39]   --->   Operation 228 'trunc' 'trunc_ln39_38' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 229 [1/1] (0.00ns)   --->   "%trunc_ln39_39 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_21" [fir128/fir.cpp:39]   --->   Operation 229 'trunc' 'trunc_ln39_39' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 230 [1/1] (0.00ns)   --->   "%empty_53 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_69_load" [fir128/fir.cpp:33]   --->   Operation 230 'trunc' 'empty_53' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 231 [1/1] (0.00ns)   --->   "%empty_54 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_11" [fir128/fir.cpp:33]   --->   Operation 231 'trunc' 'empty_54' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 232 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp79 = sub i15 %tmp78, i15 %trunc_ln39_39" [fir128/fir.cpp:39]   --->   Operation 232 'sub' 'tmp79' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 233 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp80 = sub i15 %tmp79, i15 %trunc_ln39_38" [fir128/fir.cpp:39]   --->   Operation 233 'sub' 'tmp80' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 234 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp37 = add i16 %tmp135, i16 %fir_ap_int_17_ap_int_17_shift_reg_12" [fir128/fir.cpp:39]   --->   Operation 234 'add' 'tmp37' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 235 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp139 = add i16 %tmp38, i16 %tmp37" [fir128/fir.cpp:39]   --->   Operation 235 'add' 'tmp139' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 236 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp123 = add i16 %fir_ap_int_17_ap_int_17_shift_reg_10, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_68_load" [fir128/fir.cpp:39]   --->   Operation 236 'add' 'tmp123' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 237 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp164 = add i16 %tmp123, i16 %tmp162" [fir128/fir.cpp:39]   --->   Operation 237 'add' 'tmp164' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 238 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp125 = add i13 %empty_54, i13 %empty_53" [fir128/fir.cpp:33]   --->   Operation 238 'add' 'tmp125' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 239 [1/1] (3.81ns) (root node of TernaryAdder)   --->   "%tmp182 = add i13 %tmp125, i13 %tmp180" [fir128/fir.cpp:33]   --->   Operation 239 'add' 'tmp182' <Predicate = true> <Delay = 3.81> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 12 <SV = 11> <Delay = 3.90>
+ST_12 : Operation 240 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_18 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_65" [fir128/fir.cpp:39]   --->   Operation 240 'load' 'fir_ap_int_17_ap_int_17_shift_reg_18' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 241 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_19, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_65" [fir128/fir.cpp:33]   --->   Operation 241 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 242 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_60_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_60" [fir128/fir.cpp:33]   --->   Operation 242 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_60_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 243 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_60_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_61" [fir128/fir.cpp:33]   --->   Operation 243 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 244 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_59_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_59" [fir128/fir.cpp:33]   --->   Operation 244 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_59_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 245 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_59_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_60" [fir128/fir.cpp:33]   --->   Operation 245 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 246 [1/1] (0.00ns)   --->   "%trunc_ln39_36 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_59_load" [fir128/fir.cpp:39]   --->   Operation 246 'trunc' 'trunc_ln39_36' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 247 [1/1] (0.00ns)   --->   "%trunc_ln39_37 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_60_load" [fir128/fir.cpp:39]   --->   Operation 247 'trunc' 'trunc_ln39_37' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 248 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp81 = sub i15 %tmp80, i15 %trunc_ln39_37" [fir128/fir.cpp:39]   --->   Operation 248 'sub' 'tmp81' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 249 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp82 = sub i15 %tmp81, i15 %trunc_ln39_36" [fir128/fir.cpp:39]   --->   Operation 249 'sub' 'tmp82' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 250 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp140 = sub i16 %tmp139, i16 %fir_ap_int_17_ap_int_17_shift_reg_18" [fir128/fir.cpp:39]   --->   Operation 250 'sub' 'tmp140' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 251 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp141 = sub i16 %tmp140, i16 %fir_ap_int_17_ap_int_17_shift_reg_19" [fir128/fir.cpp:39]   --->   Operation 251 'sub' 'tmp141' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 13 <SV = 12> <Delay = 3.90>
+ST_13 : Operation 252 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_67_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_67" [fir128/fir.cpp:39]   --->   Operation 252 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_67_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 253 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_67_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_68" [fir128/fir.cpp:33]   --->   Operation 253 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 254 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_66_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_66" [fir128/fir.cpp:33]   --->   Operation 254 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_66_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 255 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_66_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_67" [fir128/fir.cpp:33]   --->   Operation 255 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 256 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_18, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_66" [fir128/fir.cpp:33]   --->   Operation 256 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 257 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_58_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_58" [fir128/fir.cpp:33]   --->   Operation 257 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_58_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 258 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_58_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_59" [fir128/fir.cpp:33]   --->   Operation 258 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 259 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_57_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_57" [fir128/fir.cpp:33]   --->   Operation 259 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_57_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 260 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_57_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_58" [fir128/fir.cpp:33]   --->   Operation 260 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 261 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_56_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_56" [fir128/fir.cpp:33]   --->   Operation 261 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_56_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 262 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_56_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_57" [fir128/fir.cpp:33]   --->   Operation 262 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 263 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_23 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_55" [fir128/fir.cpp:39]   --->   Operation 263 'load' 'fir_ap_int_17_ap_int_17_shift_reg_23' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 264 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_23, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_56" [fir128/fir.cpp:33]   --->   Operation 264 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 265 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_24 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_54" [fir128/fir.cpp:39]   --->   Operation 265 'load' 'fir_ap_int_17_ap_int_17_shift_reg_24' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 266 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_24, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_55" [fir128/fir.cpp:33]   --->   Operation 266 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 267 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_25 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_53" [fir128/fir.cpp:33]   --->   Operation 267 'load' 'fir_ap_int_17_ap_int_17_shift_reg_25' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 268 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_25, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_54" [fir128/fir.cpp:33]   --->   Operation 268 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 269 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_26 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_52" [fir128/fir.cpp:39]   --->   Operation 269 'load' 'fir_ap_int_17_ap_int_17_shift_reg_26' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 270 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_26, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_53" [fir128/fir.cpp:33]   --->   Operation 270 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 271 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_49_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_49" [fir128/fir.cpp:39]   --->   Operation 271 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_49_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 272 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_48_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_48" [fir128/fir.cpp:39]   --->   Operation 272 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_48_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 273 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_48_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_49" [fir128/fir.cpp:33]   --->   Operation 273 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 274 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_31 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_42" [fir128/fir.cpp:33]   --->   Operation 274 'load' 'fir_ap_int_17_ap_int_17_shift_reg_31' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 275 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_32 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_41" [fir128/fir.cpp:33]   --->   Operation 275 'load' 'fir_ap_int_17_ap_int_17_shift_reg_32' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 276 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_32, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_42" [fir128/fir.cpp:33]   --->   Operation 276 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 277 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_40_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_40" [fir128/fir.cpp:33]   --->   Operation 277 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_40_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 278 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_40_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_41" [fir128/fir.cpp:33]   --->   Operation 278 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 279 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_39_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_39" [fir128/fir.cpp:39]   --->   Operation 279 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_39_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 280 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_39_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_40" [fir128/fir.cpp:33]   --->   Operation 280 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 281 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_38_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_38" [fir128/fir.cpp:39]   --->   Operation 281 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_38_load' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 282 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_38_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_39" [fir128/fir.cpp:33]   --->   Operation 282 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 283 [1/1] (0.00ns)   --->   "%trunc_ln39_25 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_40_load" [fir128/fir.cpp:39]   --->   Operation 283 'trunc' 'trunc_ln39_25' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 284 [1/1] (0.00ns)   --->   "%trunc_ln39_26 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_32" [fir128/fir.cpp:39]   --->   Operation 284 'trunc' 'trunc_ln39_26' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 285 [1/1] (0.00ns)   --->   "%trunc_ln39_27 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_31" [fir128/fir.cpp:39]   --->   Operation 285 'trunc' 'trunc_ln39_27' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 286 [1/1] (0.00ns)   --->   "%empty_51 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_25" [fir128/fir.cpp:33]   --->   Operation 286 'trunc' 'empty_51' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 287 [1/1] (0.00ns)   --->   "%trunc_ln39_33 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_56_load" [fir128/fir.cpp:39]   --->   Operation 287 'trunc' 'trunc_ln39_33' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 288 [1/1] (0.00ns)   --->   "%trunc_ln39_34 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_57_load" [fir128/fir.cpp:39]   --->   Operation 288 'trunc' 'trunc_ln39_34' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 289 [1/1] (0.00ns)   --->   "%trunc_ln39_35 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_58_load" [fir128/fir.cpp:39]   --->   Operation 289 'trunc' 'trunc_ln39_35' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 290 [1/1] (0.00ns)   --->   "%empty_52 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_66_load" [fir128/fir.cpp:33]   --->   Operation 290 'trunc' 'empty_52' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 291 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp83 = sub i15 %tmp82, i15 %trunc_ln39_35" [fir128/fir.cpp:39]   --->   Operation 291 'sub' 'tmp83' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 292 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp84 = sub i15 %tmp83, i15 %trunc_ln39_34" [fir128/fir.cpp:39]   --->   Operation 292 'sub' 'tmp84' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 293 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp36 = add i15 %trunc_ln39_26, i15 %trunc_ln39_25" [fir128/fir.cpp:39]   --->   Operation 293 'add' 'tmp36' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 294 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp35 = add i15 %tmp36, i15 %trunc_ln39_27" [fir128/fir.cpp:39]   --->   Operation 294 'add' 'tmp35' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 295 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp142 = sub i16 %tmp141, i16 %fir_ap_int_17_ap_int_17_shift_reg_23" [fir128/fir.cpp:39]   --->   Operation 295 'sub' 'tmp142' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 296 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp143 = sub i16 %tmp142, i16 %fir_ap_int_17_ap_int_17_shift_reg_24" [fir128/fir.cpp:39]   --->   Operation 296 'sub' 'tmp143' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 297 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp121 = add i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_39_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_38_load" [fir128/fir.cpp:39]   --->   Operation 297 'add' 'tmp121' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 298 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp120 = add i16 %tmp121, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_48_load" [fir128/fir.cpp:39]   --->   Operation 298 'add' 'tmp120' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 299 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp165 = sub i16 %tmp164, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_67_load" [fir128/fir.cpp:39]   --->   Operation 299 'sub' 'tmp165' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 300 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp166 = sub i16 %tmp165, i16 %fir_ap_int_17_ap_int_17_shift_reg_26" [fir128/fir.cpp:39]   --->   Operation 300 'sub' 'tmp166' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 301 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp183 = sub i13 %tmp182, i13 %empty_52" [fir128/fir.cpp:33]   --->   Operation 301 'sub' 'tmp183' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 302 [1/1] (3.81ns) (root node of TernaryAdder)   --->   "%tmp184 = sub i13 %tmp183, i13 %empty_51" [fir128/fir.cpp:33]   --->   Operation 302 'sub' 'tmp184' <Predicate = true> <Delay = 3.81> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 14 <SV = 13> <Delay = 5.98>
+ST_14 : Operation 303 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_27 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_51" [fir128/fir.cpp:39]   --->   Operation 303 'load' 'fir_ap_int_17_ap_int_17_shift_reg_27' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 304 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_27, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_52" [fir128/fir.cpp:33]   --->   Operation 304 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 305 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_50_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_50" [fir128/fir.cpp:33]   --->   Operation 305 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_50_load' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 306 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_50_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_51" [fir128/fir.cpp:33]   --->   Operation 306 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 307 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_49_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_50" [fir128/fir.cpp:33]   --->   Operation 307 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 308 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_47_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_47" [fir128/fir.cpp:33]   --->   Operation 308 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_47_load' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 309 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_47_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_48" [fir128/fir.cpp:33]   --->   Operation 309 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 310 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_46_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_46" [fir128/fir.cpp:33]   --->   Operation 310 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_46_load' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 311 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_46_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_47" [fir128/fir.cpp:33]   --->   Operation 311 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 312 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_28 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_45" [fir128/fir.cpp:33]   --->   Operation 312 'load' 'fir_ap_int_17_ap_int_17_shift_reg_28' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 313 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_28, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_46" [fir128/fir.cpp:33]   --->   Operation 313 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 314 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_29 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_44" [fir128/fir.cpp:33]   --->   Operation 314 'load' 'fir_ap_int_17_ap_int_17_shift_reg_29' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 315 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_29, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_45" [fir128/fir.cpp:33]   --->   Operation 315 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 316 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_30 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_43" [fir128/fir.cpp:33]   --->   Operation 316 'load' 'fir_ap_int_17_ap_int_17_shift_reg_30' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 317 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_30, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_44" [fir128/fir.cpp:33]   --->   Operation 317 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 318 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_31, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_43" [fir128/fir.cpp:33]   --->   Operation 318 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 319 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_37_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_37" [fir128/fir.cpp:33]   --->   Operation 319 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_37_load' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 320 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_37_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_38" [fir128/fir.cpp:33]   --->   Operation 320 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 321 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_36_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_36" [fir128/fir.cpp:39]   --->   Operation 321 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_36_load' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 322 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_36_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_37" [fir128/fir.cpp:33]   --->   Operation 322 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 323 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_33 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_35" [fir128/fir.cpp:39]   --->   Operation 323 'load' 'fir_ap_int_17_ap_int_17_shift_reg_33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 324 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_33, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_36" [fir128/fir.cpp:33]   --->   Operation 324 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 325 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_34 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_34" [fir128/fir.cpp:33]   --->   Operation 325 'load' 'fir_ap_int_17_ap_int_17_shift_reg_34' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 326 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_34, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_35" [fir128/fir.cpp:33]   --->   Operation 326 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 327 [1/1] (0.00ns)   --->   "%empty_48 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_34" [fir128/fir.cpp:33]   --->   Operation 327 'trunc' 'empty_48' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 328 [1/1] (0.00ns)   --->   "%empty_49 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_37_load" [fir128/fir.cpp:33]   --->   Operation 328 'trunc' 'empty_49' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 329 [1/1] (0.00ns)   --->   "%trunc_ln39_28 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_30" [fir128/fir.cpp:39]   --->   Operation 329 'trunc' 'trunc_ln39_28' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 330 [1/1] (0.00ns)   --->   "%trunc_ln39_29 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_29" [fir128/fir.cpp:39]   --->   Operation 330 'trunc' 'trunc_ln39_29' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 331 [1/1] (0.00ns)   --->   "%trunc_ln39_30 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_28" [fir128/fir.cpp:39]   --->   Operation 331 'trunc' 'trunc_ln39_30' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 332 [1/1] (0.00ns)   --->   "%trunc_ln39_31 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_46_load" [fir128/fir.cpp:39]   --->   Operation 332 'trunc' 'trunc_ln39_31' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 333 [1/1] (0.00ns)   --->   "%trunc_ln39_32 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_47_load" [fir128/fir.cpp:39]   --->   Operation 333 'trunc' 'trunc_ln39_32' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 334 [1/1] (0.00ns)   --->   "%empty_50 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_50_load" [fir128/fir.cpp:33]   --->   Operation 334 'trunc' 'empty_50' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 335 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp85 = sub i15 %tmp84, i15 %trunc_ln39_33" [fir128/fir.cpp:39]   --->   Operation 335 'sub' 'tmp85' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 336 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp31 = add i15 %tmp85, i15 %trunc_ln39_32" [fir128/fir.cpp:39]   --->   Operation 336 'add' 'tmp31' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 337 [1/1] (1.94ns)   --->   "%tmp32 = add i15 %trunc_ln39_31, i15 %trunc_ln39_30" [fir128/fir.cpp:39]   --->   Operation 337 'add' 'tmp32' <Predicate = true> <Delay = 1.94> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 338 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp34 = add i15 %trunc_ln39_29, i15 %trunc_ln39_28" [fir128/fir.cpp:39]   --->   Operation 338 'add' 'tmp34' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 339 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp33 = add i15 %tmp35, i15 %tmp34" [fir128/fir.cpp:39]   --->   Operation 339 'add' 'tmp33' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 340 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp119 = add i16 %tmp143, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_49_load" [fir128/fir.cpp:39]   --->   Operation 340 'add' 'tmp119' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 341 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp147 = add i16 %tmp120, i16 %tmp119" [fir128/fir.cpp:39]   --->   Operation 341 'add' 'tmp147' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 342 [1/1] (2.07ns)   --->   "%tmp124 = add i16 %fir_ap_int_17_ap_int_17_shift_reg_27, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_36_load" [fir128/fir.cpp:39]   --->   Operation 342 'add' 'tmp124' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 343 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp168 = add i16 %tmp124, i16 %tmp166" [fir128/fir.cpp:39]   --->   Operation 343 'add' 'tmp168' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 344 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp169 = sub i16 %tmp168, i16 %fir_ap_int_17_ap_int_17_shift_reg_33" [fir128/fir.cpp:39]   --->   Operation 344 'sub' 'tmp169' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 345 [1/1] (1.67ns)   --->   "%tmp126 = add i13 %empty_50, i13 %empty_49" [fir128/fir.cpp:33]   --->   Operation 345 'add' 'tmp126' <Predicate = true> <Delay = 1.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 346 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp186 = add i13 %tmp126, i13 %tmp184" [fir128/fir.cpp:33]   --->   Operation 346 'add' 'tmp186' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_14 : Operation 347 [1/1] (3.81ns) (root node of TernaryAdder)   --->   "%tmp187 = sub i13 %tmp186, i13 %empty_48" [fir128/fir.cpp:33]   --->   Operation 347 'sub' 'tmp187' <Predicate = true> <Delay = 3.81> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 15 <SV = 14> <Delay = 3.90>
+ST_15 : Operation 348 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_35 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_33" [fir128/fir.cpp:39]   --->   Operation 348 'load' 'fir_ap_int_17_ap_int_17_shift_reg_35' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 349 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_35, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_34" [fir128/fir.cpp:33]   --->   Operation 349 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 350 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_36 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_32" [fir128/fir.cpp:39]   --->   Operation 350 'load' 'fir_ap_int_17_ap_int_17_shift_reg_36' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 351 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_36, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_33" [fir128/fir.cpp:33]   --->   Operation 351 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 352 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp30 = add i15 %tmp32, i15 %tmp31" [fir128/fir.cpp:39]   --->   Operation 352 'add' 'tmp30' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_15 : Operation 353 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp93 = add i15 %tmp33, i15 %tmp30" [fir128/fir.cpp:39]   --->   Operation 353 'add' 'tmp93' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_15 : Operation 354 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp148 = sub i16 %tmp147, i16 %fir_ap_int_17_ap_int_17_shift_reg_35" [fir128/fir.cpp:39]   --->   Operation 354 'sub' 'tmp148' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_15 : Operation 355 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp149 = sub i16 %tmp148, i16 %fir_ap_int_17_ap_int_17_shift_reg_36" [fir128/fir.cpp:39]   --->   Operation 355 'sub' 'tmp149' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 16 <SV = 15> <Delay = 6.60>
+ST_16 : Operation 356 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_37 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_31" [fir128/fir.cpp:33]   --->   Operation 356 'load' 'fir_ap_int_17_ap_int_17_shift_reg_37' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 357 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_37, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_32" [fir128/fir.cpp:33]   --->   Operation 357 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 358 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_30_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_30" [fir128/fir.cpp:33]   --->   Operation 358 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_30_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 359 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_30_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_31" [fir128/fir.cpp:33]   --->   Operation 359 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 360 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_7_load = load i16 %fir_ap_int_17_ap_int_17_shift_reg_7" [fir128/fir.cpp:39]   --->   Operation 360 'load' 'fir_ap_int_17_ap_int_17_shift_reg_7_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 361 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_6_load = load i16 %fir_ap_int_17_ap_int_17_shift_reg_6" [fir128/fir.cpp:39]   --->   Operation 361 'load' 'fir_ap_int_17_ap_int_17_shift_reg_6_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 362 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_6_load, i16 %fir_ap_int_17_ap_int_17_shift_reg_7" [fir128/fir.cpp:33]   --->   Operation 362 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 363 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_5_load = load i16 %fir_ap_int_17_ap_int_17_shift_reg_5" [fir128/fir.cpp:33]   --->   Operation 363 'load' 'fir_ap_int_17_ap_int_17_shift_reg_5_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 364 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_5_load, i16 %fir_ap_int_17_ap_int_17_shift_reg_6" [fir128/fir.cpp:33]   --->   Operation 364 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 365 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_4_load = load i16 %fir_ap_int_17_ap_int_17_shift_reg_4" [fir128/fir.cpp:39]   --->   Operation 365 'load' 'fir_ap_int_17_ap_int_17_shift_reg_4_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 366 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_4_load, i16 %fir_ap_int_17_ap_int_17_shift_reg_5" [fir128/fir.cpp:33]   --->   Operation 366 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 367 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_3_load = load i16 %fir_ap_int_17_ap_int_17_shift_reg_3" [fir128/fir.cpp:39]   --->   Operation 367 'load' 'fir_ap_int_17_ap_int_17_shift_reg_3_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 368 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_3_load, i16 %fir_ap_int_17_ap_int_17_shift_reg_4" [fir128/fir.cpp:33]   --->   Operation 368 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 369 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_2_load = load i16 %fir_ap_int_17_ap_int_17_shift_reg_2" [fir128/fir.cpp:33]   --->   Operation 369 'load' 'fir_ap_int_17_ap_int_17_shift_reg_2_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 370 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_2_load, i16 %fir_ap_int_17_ap_int_17_shift_reg_3" [fir128/fir.cpp:33]   --->   Operation 370 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 371 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_1_load = load i16 %fir_ap_int_17_ap_int_17_shift_reg_1" [fir128/fir.cpp:39]   --->   Operation 371 'load' 'fir_ap_int_17_ap_int_17_shift_reg_1_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 372 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_1_load, i16 %fir_ap_int_17_ap_int_17_shift_reg_2" [fir128/fir.cpp:33]   --->   Operation 372 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 373 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_load = load i16 %fir_ap_int_17_ap_int_17_shift_reg" [fir128/fir.cpp:39]   --->   Operation 373 'load' 'fir_ap_int_17_ap_int_17_shift_reg_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 374 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_load, i16 %fir_ap_int_17_ap_int_17_shift_reg_1" [fir128/fir.cpp:33]   --->   Operation 374 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 375 [1/1] (0.00ns)   --->   "%store_ln35 = store i16 %trunc_ln15, i16 %fir_ap_int_17_ap_int_17_shift_reg" [fir128/fir.cpp:35]   --->   Operation 375 'store' 'store_ln35' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 376 [1/1] (0.00ns)   --->   "%empty = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_5_load" [fir128/fir.cpp:33]   --->   Operation 376 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 377 [1/1] (0.00ns)   --->   "%trunc_ln39_23 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_30_load" [fir128/fir.cpp:39]   --->   Operation 377 'trunc' 'trunc_ln39_23' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 378 [1/1] (0.00ns)   --->   "%trunc_ln39_24 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_37" [fir128/fir.cpp:39]   --->   Operation 378 'trunc' 'trunc_ln39_24' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 379 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp94 = sub i15 %tmp93, i15 %trunc_ln39_24" [fir128/fir.cpp:39]   --->   Operation 379 'sub' 'tmp94' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_16 : Operation 380 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp95 = sub i15 %tmp94, i15 %trunc_ln39_23" [fir128/fir.cpp:39]   --->   Operation 380 'sub' 'tmp95' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_16 : Operation 381 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp150 = sub i16 %tmp149, i16 %fir_ap_int_17_ap_int_17_shift_reg_7_load" [fir128/fir.cpp:39]   --->   Operation 381 'sub' 'tmp150' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_16 : Operation 382 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp151 = sub i16 %tmp150, i16 %fir_ap_int_17_ap_int_17_shift_reg_6_load" [fir128/fir.cpp:39]   --->   Operation 382 'sub' 'tmp151' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_16 : Operation 383 [1/1] (2.07ns)   --->   "%tmp122 = add i16 %fir_ap_int_17_ap_int_17_shift_reg_1_load, i16 %fir_ap_int_17_ap_int_17_shift_reg_load" [fir128/fir.cpp:39]   --->   Operation 383 'add' 'tmp122' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 384 [1/1] (1.65ns) (grouped into DSP with root node add_ln39_1)   --->   "%tmp153 = add i16 %tmp122, i16 %tmp151" [fir128/fir.cpp:39]   --->   Operation 384 'add' 'tmp153' <Predicate = true> <Delay = 1.65> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_16 : Operation 385 [3/3] (1.05ns) (grouped into DSP with root node add_ln39_1)   --->   "%tmp154 = mul i16 %tmp153, i16 11" [fir128/fir.cpp:39]   --->   Operation 385 'mul' 'tmp154' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_16 : Operation 386 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp170 = sub i16 %tmp169, i16 %fir_ap_int_17_ap_int_17_shift_reg_4_load" [fir128/fir.cpp:39]   --->   Operation 386 'sub' 'tmp170' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_16 : Operation 387 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%tmp171 = add i16 %tmp170, i16 %fir_ap_int_17_ap_int_17_shift_reg_3_load" [fir128/fir.cpp:39]   --->   Operation 387 'add' 'tmp171' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_16 : Operation 388 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp188 = sub i13 %tmp187, i13 %empty" [fir128/fir.cpp:33]   --->   Operation 388 'sub' 'tmp188' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_16 : Operation 389 [1/1] (0.00ns)   --->   "%empty_60 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_2_load" [fir128/fir.cpp:33]   --->   Operation 389 'trunc' 'empty_60' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 390 [1/1] (3.81ns) (root node of TernaryAdder)   --->   "%tmp1891 = add i13 %tmp188, i13 %empty_60" [fir128/fir.cpp:33]   --->   Operation 390 'add' 'tmp1891' <Predicate = true> <Delay = 3.81> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 17 <SV = 16> <Delay = 3.87>
+ST_17 : Operation 391 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_29_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_29" [fir128/fir.cpp:33]   --->   Operation 391 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_29_load' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 392 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_29_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_30" [fir128/fir.cpp:33]   --->   Operation 392 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 393 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_28_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_28" [fir128/fir.cpp:33]   --->   Operation 393 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_28_load' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 394 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_28_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_29" [fir128/fir.cpp:33]   --->   Operation 394 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 395 [1/1] (0.00ns)   --->   "%trunc_ln39_21 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_28_load" [fir128/fir.cpp:39]   --->   Operation 395 'trunc' 'trunc_ln39_21' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 396 [1/1] (0.00ns)   --->   "%trunc_ln39_22 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_29_load" [fir128/fir.cpp:39]   --->   Operation 396 'trunc' 'trunc_ln39_22' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 397 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp96 = sub i15 %tmp95, i15 %trunc_ln39_22" [fir128/fir.cpp:39]   --->   Operation 397 'sub' 'tmp96' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_17 : Operation 398 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp97 = sub i15 %tmp96, i15 %trunc_ln39_21" [fir128/fir.cpp:39]   --->   Operation 398 'sub' 'tmp97' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_17 : Operation 399 [2/3] (1.05ns) (grouped into DSP with root node add_ln39_1)   --->   "%tmp154 = mul i16 %tmp153, i16 11" [fir128/fir.cpp:39]   --->   Operation 399 'mul' 'tmp154' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 18 <SV = 17> <Delay = 3.87>
+ST_18 : Operation 400 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_27_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_27" [fir128/fir.cpp:33]   --->   Operation 400 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_27_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 401 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_27_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_28" [fir128/fir.cpp:33]   --->   Operation 401 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 402 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_26_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_26" [fir128/fir.cpp:33]   --->   Operation 402 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_26_load' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 403 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_26_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_27" [fir128/fir.cpp:33]   --->   Operation 403 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 404 [1/1] (0.00ns)   --->   "%trunc_ln39_19 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_26_load" [fir128/fir.cpp:39]   --->   Operation 404 'trunc' 'trunc_ln39_19' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 405 [1/1] (0.00ns)   --->   "%trunc_ln39_20 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_27_load" [fir128/fir.cpp:39]   --->   Operation 405 'trunc' 'trunc_ln39_20' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 406 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp98 = sub i15 %tmp97, i15 %trunc_ln39_20" [fir128/fir.cpp:39]   --->   Operation 406 'sub' 'tmp98' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_18 : Operation 407 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp99 = sub i15 %tmp98, i15 %trunc_ln39_19" [fir128/fir.cpp:39]   --->   Operation 407 'sub' 'tmp99' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_18 : Operation 408 [1/3] (0.00ns) (grouped into DSP with root node add_ln39_1)   --->   "%tmp154 = mul i16 %tmp153, i16 11" [fir128/fir.cpp:39]   --->   Operation 408 'mul' 'tmp154' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_18 : Operation 409 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i13.i3, i13 %tmp1891, i3 0" [fir128/fir.cpp:33]   --->   Operation 409 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 410 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln39_1 = add i16 %tmp, i16 %tmp154" [fir128/fir.cpp:39]   --->   Operation 410 'add' 'add_ln39_1' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 19 <SV = 18> <Delay = 6.00>
+ST_19 : Operation 411 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_38 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_25" [fir128/fir.cpp:33]   --->   Operation 411 'load' 'fir_ap_int_17_ap_int_17_shift_reg_38' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 412 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_38, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_26" [fir128/fir.cpp:33]   --->   Operation 412 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 413 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_39 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_24" [fir128/fir.cpp:33]   --->   Operation 413 'load' 'fir_ap_int_17_ap_int_17_shift_reg_39' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 414 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_39, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_25" [fir128/fir.cpp:33]   --->   Operation 414 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 415 [1/1] (0.00ns)   --->   "%trunc_ln39_17 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_39" [fir128/fir.cpp:39]   --->   Operation 415 'trunc' 'trunc_ln39_17' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 416 [1/1] (0.00ns)   --->   "%trunc_ln39_18 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_38" [fir128/fir.cpp:39]   --->   Operation 416 'trunc' 'trunc_ln39_18' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 417 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp100 = sub i15 %tmp99, i15 %trunc_ln39_18" [fir128/fir.cpp:39]   --->   Operation 417 'sub' 'tmp100' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_19 : Operation 418 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp101 = sub i15 %tmp100, i15 %trunc_ln39_17" [fir128/fir.cpp:39]   --->   Operation 418 'sub' 'tmp101' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_19 : Operation 419 [1/1] (0.00ns)   --->   "%empty_59 = shl i16 %tmp171, i16 2" [fir128/fir.cpp:39]   --->   Operation 419 'shl' 'empty_59' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 420 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp172 = sub i16 %empty_59, i16 %tmp171" [fir128/fir.cpp:39]   --->   Operation 420 'sub' 'tmp172' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_19 : Operation 421 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln39_1 = add i16 %tmp, i16 %tmp154" [fir128/fir.cpp:39]   --->   Operation 421 'add' 'add_ln39_1' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '' 'add' 'sub' 'mul' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_19 : Operation 422 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%add_ln39_2 = add i16 %add_ln39_1, i16 %tmp172" [fir128/fir.cpp:39]   --->   Operation 422 'add' 'add_ln39_2' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 20 <SV = 19> <Delay = 3.87>
+ST_20 : Operation 423 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_40 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_23" [fir128/fir.cpp:33]   --->   Operation 423 'load' 'fir_ap_int_17_ap_int_17_shift_reg_40' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 424 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_40, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_24" [fir128/fir.cpp:33]   --->   Operation 424 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 425 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_41 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_22" [fir128/fir.cpp:33]   --->   Operation 425 'load' 'fir_ap_int_17_ap_int_17_shift_reg_41' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 426 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_41, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_23" [fir128/fir.cpp:33]   --->   Operation 426 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 427 [1/1] (0.00ns)   --->   "%trunc_ln39_15 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_41" [fir128/fir.cpp:39]   --->   Operation 427 'trunc' 'trunc_ln39_15' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 428 [1/1] (0.00ns)   --->   "%trunc_ln39_16 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_40" [fir128/fir.cpp:39]   --->   Operation 428 'trunc' 'trunc_ln39_16' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 429 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp102 = sub i15 %tmp101, i15 %trunc_ln39_16" [fir128/fir.cpp:39]   --->   Operation 429 'sub' 'tmp102' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_20 : Operation 430 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp103 = sub i15 %tmp102, i15 %trunc_ln39_15" [fir128/fir.cpp:39]   --->   Operation 430 'sub' 'tmp103' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 21 <SV = 20> <Delay = 3.87>
+ST_21 : Operation 431 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_42 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_21" [fir128/fir.cpp:33]   --->   Operation 431 'load' 'fir_ap_int_17_ap_int_17_shift_reg_42' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 432 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_42, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_22" [fir128/fir.cpp:33]   --->   Operation 432 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 433 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_20_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_20" [fir128/fir.cpp:33]   --->   Operation 433 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_20_load' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 434 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_20_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_21" [fir128/fir.cpp:33]   --->   Operation 434 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 435 [1/1] (0.00ns)   --->   "%trunc_ln39_13 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_20_load" [fir128/fir.cpp:39]   --->   Operation 435 'trunc' 'trunc_ln39_13' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 436 [1/1] (0.00ns)   --->   "%trunc_ln39_14 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_42" [fir128/fir.cpp:39]   --->   Operation 436 'trunc' 'trunc_ln39_14' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 437 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp104 = sub i15 %tmp103, i15 %trunc_ln39_14" [fir128/fir.cpp:39]   --->   Operation 437 'sub' 'tmp104' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_21 : Operation 438 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp105 = sub i15 %tmp104, i15 %trunc_ln39_13" [fir128/fir.cpp:39]   --->   Operation 438 'sub' 'tmp105' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 22 <SV = 21> <Delay = 3.87>
+ST_22 : Operation 439 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_19_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_19" [fir128/fir.cpp:33]   --->   Operation 439 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_19_load' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 440 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_19_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_20" [fir128/fir.cpp:33]   --->   Operation 440 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 441 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_18_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_18" [fir128/fir.cpp:33]   --->   Operation 441 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_18_load' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 442 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_18_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_19" [fir128/fir.cpp:33]   --->   Operation 442 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 443 [1/1] (0.00ns)   --->   "%trunc_ln39_11 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_18_load" [fir128/fir.cpp:39]   --->   Operation 443 'trunc' 'trunc_ln39_11' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 444 [1/1] (0.00ns)   --->   "%trunc_ln39_12 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_19_load" [fir128/fir.cpp:39]   --->   Operation 444 'trunc' 'trunc_ln39_12' <Predicate = true> <Delay = 0.00>
+ST_22 : Operation 445 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp106 = sub i15 %tmp105, i15 %trunc_ln39_12" [fir128/fir.cpp:39]   --->   Operation 445 'sub' 'tmp106' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_22 : Operation 446 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp107 = sub i15 %tmp106, i15 %trunc_ln39_11" [fir128/fir.cpp:39]   --->   Operation 446 'sub' 'tmp107' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 23 <SV = 22> <Delay = 3.87>
+ST_23 : Operation 447 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_17_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_17" [fir128/fir.cpp:33]   --->   Operation 447 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_17_load' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 448 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_17_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_18" [fir128/fir.cpp:33]   --->   Operation 448 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 449 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_16_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_16" [fir128/fir.cpp:33]   --->   Operation 449 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_16_load' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 450 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_16_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_17" [fir128/fir.cpp:33]   --->   Operation 450 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 451 [1/1] (0.00ns)   --->   "%trunc_ln39_9 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_16_load" [fir128/fir.cpp:39]   --->   Operation 451 'trunc' 'trunc_ln39_9' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 452 [1/1] (0.00ns)   --->   "%trunc_ln39_10 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_17_load" [fir128/fir.cpp:39]   --->   Operation 452 'trunc' 'trunc_ln39_10' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 453 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp108 = sub i15 %tmp107, i15 %trunc_ln39_10" [fir128/fir.cpp:39]   --->   Operation 453 'sub' 'tmp108' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_23 : Operation 454 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp109 = sub i15 %tmp108, i15 %trunc_ln39_9" [fir128/fir.cpp:39]   --->   Operation 454 'sub' 'tmp109' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 24 <SV = 23> <Delay = 3.87>
+ST_24 : Operation 455 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_43 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_15" [fir128/fir.cpp:33]   --->   Operation 455 'load' 'fir_ap_int_17_ap_int_17_shift_reg_43' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 456 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_43, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_16" [fir128/fir.cpp:33]   --->   Operation 456 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 457 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_44 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_14" [fir128/fir.cpp:33]   --->   Operation 457 'load' 'fir_ap_int_17_ap_int_17_shift_reg_44' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 458 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_44, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_15" [fir128/fir.cpp:33]   --->   Operation 458 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 459 [1/1] (0.00ns)   --->   "%trunc_ln39_7 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_44" [fir128/fir.cpp:39]   --->   Operation 459 'trunc' 'trunc_ln39_7' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 460 [1/1] (0.00ns)   --->   "%trunc_ln39_8 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_43" [fir128/fir.cpp:39]   --->   Operation 460 'trunc' 'trunc_ln39_8' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 461 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp110 = sub i15 %tmp109, i15 %trunc_ln39_8" [fir128/fir.cpp:39]   --->   Operation 461 'sub' 'tmp110' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_24 : Operation 462 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp111 = sub i15 %tmp110, i15 %trunc_ln39_7" [fir128/fir.cpp:39]   --->   Operation 462 'sub' 'tmp111' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 25 <SV = 24> <Delay = 3.87>
+ST_25 : Operation 463 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_45 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_13" [fir128/fir.cpp:33]   --->   Operation 463 'load' 'fir_ap_int_17_ap_int_17_shift_reg_45' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 464 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_45, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_14" [fir128/fir.cpp:33]   --->   Operation 464 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 465 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_46 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_12" [fir128/fir.cpp:33]   --->   Operation 465 'load' 'fir_ap_int_17_ap_int_17_shift_reg_46' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 466 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_46, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_13" [fir128/fir.cpp:33]   --->   Operation 466 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 467 [1/1] (0.00ns)   --->   "%trunc_ln39_5 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_46" [fir128/fir.cpp:39]   --->   Operation 467 'trunc' 'trunc_ln39_5' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 468 [1/1] (0.00ns)   --->   "%trunc_ln39_6 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_45" [fir128/fir.cpp:39]   --->   Operation 468 'trunc' 'trunc_ln39_6' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 469 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp112 = sub i15 %tmp111, i15 %trunc_ln39_6" [fir128/fir.cpp:39]   --->   Operation 469 'sub' 'tmp112' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_25 : Operation 470 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp113 = sub i15 %tmp112, i15 %trunc_ln39_5" [fir128/fir.cpp:39]   --->   Operation 470 'sub' 'tmp113' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 26 <SV = 25> <Delay = 3.87>
+ST_26 : Operation 471 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_47 = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_11" [fir128/fir.cpp:33]   --->   Operation 471 'load' 'fir_ap_int_17_ap_int_17_shift_reg_47' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 472 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_47, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_12" [fir128/fir.cpp:33]   --->   Operation 472 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 473 [1/1] (0.00ns)   --->   "%p_ZZ3firP6ap_intILi17EES0_E9shift_reg_10_load = load i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_10" [fir128/fir.cpp:33]   --->   Operation 473 'load' 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_10_load' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 474 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_10_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_11" [fir128/fir.cpp:33]   --->   Operation 474 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 475 [1/1] (0.00ns)   --->   "%trunc_ln39_3 = trunc i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_10_load" [fir128/fir.cpp:39]   --->   Operation 475 'trunc' 'trunc_ln39_3' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 476 [1/1] (0.00ns)   --->   "%trunc_ln39_4 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_47" [fir128/fir.cpp:39]   --->   Operation 476 'trunc' 'trunc_ln39_4' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 477 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp114 = sub i15 %tmp113, i15 %trunc_ln39_4" [fir128/fir.cpp:39]   --->   Operation 477 'sub' 'tmp114' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_26 : Operation 478 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp115 = sub i15 %tmp114, i15 %trunc_ln39_3" [fir128/fir.cpp:39]   --->   Operation 478 'sub' 'tmp115' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 27 <SV = 26> <Delay = 3.87>
+ST_27 : Operation 479 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_9_load = load i16 %fir_ap_int_17_ap_int_17_shift_reg_9" [fir128/fir.cpp:33]   --->   Operation 479 'load' 'fir_ap_int_17_ap_int_17_shift_reg_9_load' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 480 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_9_load, i16 %p_ZZ3firP6ap_intILi17EES0_E9shift_reg_10" [fir128/fir.cpp:33]   --->   Operation 480 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 481 [1/1] (0.00ns)   --->   "%fir_ap_int_17_ap_int_17_shift_reg_8_load = load i16 %fir_ap_int_17_ap_int_17_shift_reg_8" [fir128/fir.cpp:33]   --->   Operation 481 'load' 'fir_ap_int_17_ap_int_17_shift_reg_8_load' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 482 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_8_load, i16 %fir_ap_int_17_ap_int_17_shift_reg_9" [fir128/fir.cpp:33]   --->   Operation 482 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 483 [1/1] (0.00ns)   --->   "%store_ln33 = store i16 %fir_ap_int_17_ap_int_17_shift_reg_7_load, i16 %fir_ap_int_17_ap_int_17_shift_reg_8" [fir128/fir.cpp:33]   --->   Operation 483 'store' 'store_ln33' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 484 [1/1] (0.00ns)   --->   "%trunc_ln39_1 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_8_load" [fir128/fir.cpp:39]   --->   Operation 484 'trunc' 'trunc_ln39_1' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 485 [1/1] (0.00ns)   --->   "%trunc_ln39_2 = trunc i16 %fir_ap_int_17_ap_int_17_shift_reg_9_load" [fir128/fir.cpp:39]   --->   Operation 485 'trunc' 'trunc_ln39_2' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 486 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp116 = sub i15 %tmp115, i15 %trunc_ln39_2" [fir128/fir.cpp:39]   --->   Operation 486 'sub' 'tmp116' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_27 : Operation 487 [1/1] (3.87ns) (root node of TernaryAdder)   --->   "%tmp117 = sub i15 %tmp116, i15 %trunc_ln39_1" [fir128/fir.cpp:39]   --->   Operation 487 'sub' 'tmp117' <Predicate = true> <Delay = 3.87> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_27 : Operation 488 [1/1] (0.00ns)   --->   "%empty_58 = trunc i15 %tmp117" [fir128/fir.cpp:39]   --->   Operation 488 'trunc' 'empty_58' <Predicate = true> <Delay = 0.00>
+
+State 28 <SV = 27> <Delay = 3.90>
+ST_28 : Operation 489 [1/1] (0.00ns)   --->   "%spectopmodule_ln15 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty" [fir128/fir.cpp:15]   --->   Operation 489 'spectopmodule' 'spectopmodule_ln15' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 490 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i17 %y"   --->   Operation 490 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 491 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i17 %y, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 491 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 492 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i17 %x"   --->   Operation 492 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 493 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i17 %x, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 493 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 494 [1/1] (0.00ns)   --->   "%p_shl3 = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i13.i3, i13 %empty_58, i3 0" [fir128/fir.cpp:39]   --->   Operation 494 'bitconcatenate' 'p_shl3' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 495 [1/1] (0.00ns)   --->   "%p_shl4 = bitconcatenate i16 @_ssdm_op_BitConcatenate.i16.i15.i1, i15 %tmp117, i1 0" [fir128/fir.cpp:39]   --->   Operation 495 'bitconcatenate' 'p_shl4' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 496 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln39 = add i16 %p_shl3, i16 %p_shl4" [fir128/fir.cpp:39]   --->   Operation 496 'add' 'add_ln39' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_28 : Operation 497 [1/1] (3.90ns) (root node of TernaryAdder)   --->   "%acc = add i16 %add_ln39_2, i16 %add_ln39" [fir128/fir.cpp:39]   --->   Operation 497 'add' 'acc' <Predicate = true> <Delay = 3.90> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.95> <IPBlock> <Opcode : '' 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_28 : Operation 498 [1/1] (0.00ns)   --->   "%sext_ln41 = sext i16 %acc" [fir128/fir.cpp:41]   --->   Operation 498 'sext' 'sext_ln41' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 499 [1/1] (0.00ns)   --->   "%write_ln41 = write void @_ssdm_op_Write.ap_auto.i17P0A, i17 %y, i17 %sext_ln41" [fir128/fir.cpp:41]   --->   Operation 499 'write' 'write_ln41' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 500 [1/1] (0.00ns)   --->   "%ret_ln43 = ret" [fir128/fir.cpp:43]   --->   Operation 500 'ret' 'ret_ln43' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.874ns
+The critical path consists of the following:
+	'load' operation 15 bit ('p_ZZ3firP6ap_intILi17EES0_E9shift_reg_106_load', fir128/fir.cpp:39) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_106' [176]  (0.000 ns)
+	'add' operation 15 bit ('tmp21', fir128/fir.cpp:39) [479]  (3.874 ns)
+
+ <State 2>: 5.818ns
+The critical path consists of the following:
+	'load' operation 15 bit ('p_ZZ3firP6ap_intILi17EES0_E9shift_reg_108_load', fir128/fir.cpp:39) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_108' [172]  (0.000 ns)
+	'add' operation 15 bit ('tmp20', fir128/fir.cpp:39) [476]  (1.944 ns)
+	'add' operation 15 bit ('tmp19', fir128/fir.cpp:39) [477]  (0.000 ns)
+	'add' operation 15 bit ('tmp18', fir128/fir.cpp:39) [480]  (3.874 ns)
+
+ <State 3>: 5.818ns
+The critical path consists of the following:
+	wire read operation ('x_read', fir128/fir.cpp:15) on port 'x' (fir128/fir.cpp:15) [130]  (0.000 ns)
+	'add' operation 15 bit ('tmp4', fir128/fir.cpp:39) [460]  (1.944 ns)
+	'add' operation 15 bit ('tmp3', fir128/fir.cpp:39) [461]  (0.000 ns)
+	'add' operation 15 bit ('tmp2', fir128/fir.cpp:39) [464]  (3.874 ns)
+
+ <State 4>: 3.874ns
+The critical path consists of the following:
+	'add' operation 15 bit ('tmp1', fir128/fir.cpp:39) [470]  (0.000 ns)
+	'add' operation 15 bit ('tmp61', fir128/fir.cpp:39) [482]  (3.874 ns)
+
+ <State 5>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_95' [199]  (0.000 ns)
+	'sub' operation 15 bit ('tmp62', fir128/fir.cpp:39) [483]  (0.000 ns)
+	'sub' operation 15 bit ('tmp63', fir128/fir.cpp:39) [484]  (3.874 ns)
+
+ <State 6>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_5', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_93' [203]  (0.000 ns)
+	'sub' operation 15 bit ('tmp64', fir128/fir.cpp:39) [485]  (0.000 ns)
+	'sub' operation 15 bit ('tmp65', fir128/fir.cpp:39) [486]  (3.874 ns)
+
+ <State 7>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_7', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_91' [207]  (0.000 ns)
+	'sub' operation 15 bit ('tmp66', fir128/fir.cpp:39) [487]  (0.000 ns)
+	'sub' operation 15 bit ('tmp67', fir128/fir.cpp:39) [488]  (3.874 ns)
+
+ <State 8>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('p_ZZ3firP6ap_intILi17EES0_E9shift_reg_89_load', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_89' [211]  (0.000 ns)
+	'sub' operation 15 bit ('tmp68', fir128/fir.cpp:39) [489]  (0.000 ns)
+	'sub' operation 15 bit ('tmp69', fir128/fir.cpp:39) [490]  (3.874 ns)
+
+ <State 9>: 5.980ns
+The critical path consists of the following:
+	'load' operation 16 bit ('p_ZZ3firP6ap_intILi17EES0_E9shift_reg_103_load', fir128/fir.cpp:39) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_103' [182]  (0.000 ns)
+	'add' operation 16 bit ('tmp131', fir128/fir.cpp:39) [542]  (2.077 ns)
+	'sub' operation 16 bit ('tmp132', fir128/fir.cpp:39) [543]  (0.000 ns)
+	'sub' operation 16 bit ('tmp133', fir128/fir.cpp:39) [544]  (3.903 ns)
+
+ <State 10>: 3.903ns
+The critical path consists of the following:
+	'load' operation 16 bit ('p_ZZ3firP6ap_intILi17EES0_E9shift_reg_87_load', fir128/fir.cpp:39) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_87' [215]  (0.000 ns)
+	'sub' operation 16 bit ('tmp134', fir128/fir.cpp:39) [545]  (0.000 ns)
+	'sub' operation 16 bit ('tmp135', fir128/fir.cpp:39) [546]  (3.903 ns)
+
+ <State 11>: 3.903ns
+The critical path consists of the following:
+	'add' operation 16 bit ('tmp37', fir128/fir.cpp:39) [547]  (0.000 ns)
+	'add' operation 16 bit ('tmp139', fir128/fir.cpp:39) [550]  (3.903 ns)
+
+ <State 12>: 3.903ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_18', fir128/fir.cpp:39) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_65' [259]  (0.000 ns)
+	'sub' operation 16 bit ('tmp140', fir128/fir.cpp:39) [551]  (0.000 ns)
+	'sub' operation 16 bit ('tmp141', fir128/fir.cpp:39) [552]  (3.903 ns)
+
+ <State 13>: 3.903ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_23', fir128/fir.cpp:39) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_55' [279]  (0.000 ns)
+	'sub' operation 16 bit ('tmp142', fir128/fir.cpp:39) [553]  (0.000 ns)
+	'sub' operation 16 bit ('tmp143', fir128/fir.cpp:39) [554]  (3.903 ns)
+
+ <State 14>: 5.980ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_27', fir128/fir.cpp:39) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_51' [287]  (0.000 ns)
+	'add' operation 16 bit ('tmp124', fir128/fir.cpp:39) [572]  (2.077 ns)
+	'add' operation 16 bit ('tmp168', fir128/fir.cpp:39) [573]  (0.000 ns)
+	'sub' operation 16 bit ('tmp169', fir128/fir.cpp:39) [574]  (3.903 ns)
+
+ <State 15>: 3.903ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_35', fir128/fir.cpp:39) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_33' [323]  (0.000 ns)
+	'sub' operation 16 bit ('tmp148', fir128/fir.cpp:39) [559]  (0.000 ns)
+	'sub' operation 16 bit ('tmp149', fir128/fir.cpp:39) [560]  (3.903 ns)
+
+ <State 16>: 6.603ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_7_load', fir128/fir.cpp:39) on static variable 'fir_ap_int_17_ap_int_17_shift_reg_7' [375]  (0.000 ns)
+	'sub' operation 16 bit ('tmp150', fir128/fir.cpp:39) [561]  (0.000 ns)
+	'sub' operation 16 bit ('tmp151', fir128/fir.cpp:39) [562]  (3.903 ns)
+	'add' operation 16 bit of DSP[593] ('tmp153', fir128/fir.cpp:39) [564]  (1.650 ns)
+	'mul' operation 16 bit of DSP[593] ('tmp154', fir128/fir.cpp:39) [565]  (1.050 ns)
+
+ <State 17>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('p_ZZ3firP6ap_intILi17EES0_E9shift_reg_29_load', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_29' [331]  (0.000 ns)
+	'sub' operation 15 bit ('tmp96', fir128/fir.cpp:39) [517]  (0.000 ns)
+	'sub' operation 15 bit ('tmp97', fir128/fir.cpp:39) [518]  (3.874 ns)
+
+ <State 18>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('p_ZZ3firP6ap_intILi17EES0_E9shift_reg_27_load', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_27' [335]  (0.000 ns)
+	'sub' operation 15 bit ('tmp98', fir128/fir.cpp:39) [519]  (0.000 ns)
+	'sub' operation 15 bit ('tmp99', fir128/fir.cpp:39) [520]  (3.874 ns)
+
+ <State 19>: 6.003ns
+The critical path consists of the following:
+	'add' operation 16 bit of DSP[593] ('add_ln39_1', fir128/fir.cpp:39) [593]  (2.100 ns)
+	'add' operation 16 bit ('add_ln39_2', fir128/fir.cpp:39) [594]  (3.903 ns)
+
+ <State 20>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_40', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_23' [343]  (0.000 ns)
+	'sub' operation 15 bit ('tmp102', fir128/fir.cpp:39) [523]  (0.000 ns)
+	'sub' operation 15 bit ('tmp103', fir128/fir.cpp:39) [524]  (3.874 ns)
+
+ <State 21>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_42', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_21' [347]  (0.000 ns)
+	'sub' operation 15 bit ('tmp104', fir128/fir.cpp:39) [525]  (0.000 ns)
+	'sub' operation 15 bit ('tmp105', fir128/fir.cpp:39) [526]  (3.874 ns)
+
+ <State 22>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('p_ZZ3firP6ap_intILi17EES0_E9shift_reg_19_load', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_19' [351]  (0.000 ns)
+	'sub' operation 15 bit ('tmp106', fir128/fir.cpp:39) [527]  (0.000 ns)
+	'sub' operation 15 bit ('tmp107', fir128/fir.cpp:39) [528]  (3.874 ns)
+
+ <State 23>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('p_ZZ3firP6ap_intILi17EES0_E9shift_reg_17_load', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_17' [355]  (0.000 ns)
+	'sub' operation 15 bit ('tmp108', fir128/fir.cpp:39) [529]  (0.000 ns)
+	'sub' operation 15 bit ('tmp109', fir128/fir.cpp:39) [530]  (3.874 ns)
+
+ <State 24>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_43', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_15' [359]  (0.000 ns)
+	'sub' operation 15 bit ('tmp110', fir128/fir.cpp:39) [531]  (0.000 ns)
+	'sub' operation 15 bit ('tmp111', fir128/fir.cpp:39) [532]  (3.874 ns)
+
+ <State 25>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_45', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_13' [363]  (0.000 ns)
+	'sub' operation 15 bit ('tmp112', fir128/fir.cpp:39) [533]  (0.000 ns)
+	'sub' operation 15 bit ('tmp113', fir128/fir.cpp:39) [534]  (3.874 ns)
+
+ <State 26>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_47', fir128/fir.cpp:33) on static variable 'p_ZZ3firP6ap_intILi17EES0_E9shift_reg_11' [367]  (0.000 ns)
+	'sub' operation 15 bit ('tmp114', fir128/fir.cpp:39) [535]  (0.000 ns)
+	'sub' operation 15 bit ('tmp115', fir128/fir.cpp:39) [536]  (3.874 ns)
+
+ <State 27>: 3.874ns
+The critical path consists of the following:
+	'load' operation 16 bit ('fir_ap_int_17_ap_int_17_shift_reg_9_load', fir128/fir.cpp:33) on static variable 'fir_ap_int_17_ap_int_17_shift_reg_9' [371]  (0.000 ns)
+	'sub' operation 15 bit ('tmp116', fir128/fir.cpp:39) [537]  (0.000 ns)
+	'sub' operation 15 bit ('tmp117', fir128/fir.cpp:39) [538]  (3.874 ns)
+
+ <State 28>: 3.903ns
+The critical path consists of the following:
+	'add' operation 16 bit ('add_ln39', fir128/fir.cpp:39) [592]  (0.000 ns)
+	'add' operation 16 bit ('acc', fir128/fir.cpp:39) [595]  (3.903 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
